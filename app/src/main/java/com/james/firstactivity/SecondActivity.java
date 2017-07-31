@@ -13,6 +13,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity_layout);
+        Log.d("SecondActivity","task id is:"+getTaskId());
         /*Intent intent=getIntent();
         String data=intent.getStringExtra("extra_data");
         Log.d("SecondActivity",data);*/
@@ -21,7 +22,7 @@ public class SecondActivity extends AppCompatActivity {
         button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(SecondActivity.this,FirstActivity.class);
+                Intent intent=new Intent(SecondActivity.this,ThirdActivity.class);
                 startActivity(intent);
 
                 /*//返回数据给上一个activity

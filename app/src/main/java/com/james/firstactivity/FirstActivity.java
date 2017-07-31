@@ -18,7 +18,8 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //加载activity的一个布局
         setContentView(R.layout.first_layout);
-        Log.d("FirstActivity",this.toString());
+        /*Log.d("FirstActivity",this.toString());*/
+        Log.d("FirstActivity","task id is:"+getTaskId());
         /*Toast是一种提醒，现在设定一个toast的触发点*/
         Button button_1=(Button)findViewById(R.id.button_1);//获取一个view
         button_1.setOnClickListener(new View.OnClickListener() {
