@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.james.firstactivity">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 注册activity -->
+        <activity android:name=".FirstActivity"
+
+
+            android:launchMode="singleTask">
+            <!--android:launchMode:standard 每一次启动activity都会重新新创建一个activity实例-->
+            <!--android:launchMode:singleTop 如果该活动位于栈顶，将会直接使用-->
+            <!--android:launchMode:singleTask 如果该活动的一个实例位于返回栈中，则直接使用该实例-->
+
+            <!-- 将activity设置为主活动，app启动后将进入 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity">
+            <intent-filter>
+
+                <!-- 设置隐式启动Intent -->
+                <action android:name="com.james.firstactivity.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ThirdActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FourthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
