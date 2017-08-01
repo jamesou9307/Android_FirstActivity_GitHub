@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class FirstActivity extends AppCompatActivity {
         //加载activity的一个布局
         setContentView(R.layout.first_layout);
         /*Log.d("FirstActivity",this.toString());*/
-        Log.d("FirstActivity","task id is:"+getTaskId());
+        //Log.d("FirstActivity","task id is:"+getTaskId());
         /*Toast是一种提醒，现在设定一个toast的触发点*/
         Button button_1=(Button)findViewById(R.id.button_1);//获取一个view
         button_1.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +69,7 @@ public class FirstActivity extends AppCompatActivity {
                 *直接返回要位于栈顶的实例，反之，还是会创建新的实例
                 * singleTask:从返回栈中查找该activity的实例，找到后该实例之上的activity全部出栈
                 * */
-                Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+                Intent intent=new Intent(FirstActivity.this,ThirdActivity.class);
                 startActivity(intent);
 
 
