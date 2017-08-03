@@ -11,13 +11,14 @@
         android:theme="@style/AppTheme">
 
         <!-- 注册activity -->
-        <activity android:name=".FirstActivity"
-
-
+        <activity
+            android:name=".FirstActivity"
             android:launchMode="singleTask">
-            <!--android:launchMode:standard 每一次启动activity都会重新新创建一个activity实例-->
-            <!--android:launchMode:singleTop 如果该活动位于栈顶，将会直接使用-->
-            <!--android:launchMode:singleTask 如果该活动的一个实例位于返回栈中，则直接使用该实例-->
+
+            <!-- android:launchMode:standard 每一次启动activity都会重新新创建一个activity实例 -->
+            <!-- android:launchMode:singleTop 如果该活动位于栈顶，将会直接使用 -->
+            <!-- android:launchMode:singleTask 如果该活动的一个实例位于返回栈中，则直接使用该实例 -->
+
 
             <!-- 将activity设置为主活动，app启动后将进入 -->
             <intent-filter>
@@ -26,9 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
+        <activity
+            android:name=".SecondActivity"
             android:launchMode="singleInstance">
-            <!--android:launchMode:singleInstance 会将该活动放到另外一个返回栈中-->
+
+            <!-- android:launchMode:singleInstance 会将该活动放到另外一个返回栈中 -->
             <intent-filter>
 
                 <!-- 设置隐式启动Intent -->
@@ -48,10 +51,12 @@
         </activity>
         <activity android:name=".FourthActivity">
             <intent-filter>
-                <action android:name="android.intent.action.DIAL"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".FifthActivity"></activity>
     </application>
 
 </manifest>
